@@ -16,12 +16,17 @@ public class Card
     private String suits; //encapsulation
     //constant
     public static final String [] SUITS = { "diamonds","clubs","spades","hearts"};
+    public Card(int value,String suit)
+    {
+        this.value=value;
+        this.suits=suit;
+    }
 
     /**
      * @return the value
      */
     public int getValue() {
-        return value;
+        return this.value;
     }
 
     /**
@@ -35,7 +40,7 @@ public class Card
      * @return the suits
      */
     public String getSuits() {
-        return suits;
+        return this.suits;
     }
 
     /**
@@ -45,10 +50,7 @@ public class Card
         this.suits = suits;
     }
    //number
-    @Override
-    public String toString() {
-        return "Card{" + "suit= '" + suits + '\'' + ", value=" + value + '}';
-    }
+    
     
     //method for suits
     
