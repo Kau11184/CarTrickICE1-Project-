@@ -47,5 +47,8 @@ public class Card
    //number
     
     //method for suits
-    
+    @Override
+    public String toString() {
+        return "Card{" + "suit= '" + suits + '\'' + ", value=" + value + '}';
+    }
 }
