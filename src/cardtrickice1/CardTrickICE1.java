@@ -50,7 +50,7 @@ public class CardTrickICE1 {
         boolean found=false;
         for(Card card:magicHand)
         {
-            if(card.getValue()==match.getValue()&& card.getSuits().equals(match.getSuits());
+            if(card.getValue()==match.getValue()&& card.getSuits().equals(match.getSuits())
             {
                 found=true;
                 break;
