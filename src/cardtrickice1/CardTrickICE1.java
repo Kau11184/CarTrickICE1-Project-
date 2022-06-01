@@ -20,44 +20,50 @@ public class CardTrickICE1 {
     public static void main(String[] args) 
     {
         Card[] magicHand = new Card[7]; //Array of object
-        Random ramcards = new Random();
+        Random random = new Random();
         
         for( int i=0;i<magicHand.length;i++)
         {
-            Card c1 = new Card();
-            int num1 = ramcards.nextInt(13)+ 1;
-            int num2 = ramcards.nextInt(4);
+            Card c = new Card();
+            int num = random.nextInt(13)+ 1;
+            int num2 = random.nextInt(4);
             
-            c1.setValue(num1);//use a method to generate random *13
-            c1.setSuits(card.suits[num2]);//random method suit 
+            c.setValue(num);
+            c.setSuits(Card.SUITS[num2]);
+            //use a method to generate random *13
+            //random method suit 
         }
         
         //step 2:take input 
         Scanner input = new Scanner(System.in);
         Card c2 = new Card();
         
-        System.out.println("Please choose card Value between 1-13");
+        System.out.println("Pick a card : ");
         int num3 = input.nextInt();
         
-        System.out.println("Please choose a Card Suits spades, clubs, diamonds, hearts");
-        String suit = input.next();
+        System.out.println("Pick a suit: ");
+        String suits = input.next();
         
         c2.setValue(num3);
-        c2.setSuits(suit);
+        c2.setSuits(suits);
+        
+        
         
         for(Card y:magicHand){
-            if(c2==z){
-                boolean right=true;
+            if(c2==y){
+                boolean right =true;
+        }
         }
         
+        if(right==true) {
+            System.out.println("Match found");   
         }
-        //step 3: match with array 
-        if(right==true){
-            System.out.println("Match found");
-        }
+        
         else {
-            System.out.println("Sorry no match");
+            System.out.println("Sorry, no match");
         }
     }
-    
 }
+    
+    
+
