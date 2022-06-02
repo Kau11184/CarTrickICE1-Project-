@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//Student Id:991651092
 package cardtrickice1;
 
 /** define card value and suits
@@ -16,17 +17,12 @@ public class Card
     private String suits; //encapsulation
     //constant
     public static final String [] SUITS = { "diamonds","clubs","spades","hearts"};
-    public Card(int value,String suit)
-    {
-        this.value=value;
-        this.suits=suit;
-    }
 
     /**
      * @return the value
      */
     public int getValue() {
-        return this.value;
+        return value;
     }
 
     /**
@@ -40,7 +36,7 @@ public class Card
      * @return the suits
      */
     public String getSuits() {
-        return this.suits;
+        return suits;
     }
 
     /**
@@ -49,9 +45,15 @@ public class Card
     public void setSuits(String suits) {
         this.suits = suits;
     }
-   //number
     
-    
+    public static int RandomValue()
+    {
+        return  (int) ((Math.random()*12)+1);
+    }
     //method for suits
-    
+       public static String RandomSuit()
+   {
+       int a = (int)(Math.random()*4);
+       return SUITS[a];
+   }
 }
